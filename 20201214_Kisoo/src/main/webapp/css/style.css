@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+#container{
+   position: relative;
+   top: 100px;
+   width: 1350px;
+   margin: auto;      
+}
+
+#btn {
+	margin: auto;
+}
