@@ -55,9 +55,16 @@
 						<th>작성일</th>
 						<th>삭제여부</th>
 					</tr>
-				<jsp:useBean id="format" class = "com.min.edu.usebean.inputList" scope="page"/>
-		     	<jsp:setProperty property="lists" name="format" value = "${list}"/>
-		     	<jsp:getProperty property="listForm" name="format"/>
+					<c:forEach items="${list }" var="dto" varStatus="vs">
+					<tr>
+						<td><input type="checkbox" class="chk" name="chk" value="${aDto.seq}"></td>
+						<td>${vs.count }</td>
+						<td>${dto.id }</td>
+						<td>
+						<c:if test="${dto }"></c:if>
+						</td>
+						<td></td>
+					</c:forEach>
 				</table>
 			</div>
 				<input type="button" onclick="goInsert()" value="글 작성" class="btn btn-success"> &nbsp;&nbsp;
